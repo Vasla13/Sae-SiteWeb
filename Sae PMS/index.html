@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Riascloud | redirection</title>
+        <script>
+            // Fonction pour obtenir la langue du navigateur
+            function getBrowserLanguage() {
+            return navigator.language || navigator.userLanguage;
+            }
+
+            // Redirection en fonction de la langue
+            window.onload = function() {
+            var userLanguage = getBrowserLanguage().toLowerCase();
+            if (userLanguage.startsWith('fr')) {
+                window.location.href = './fr/index.html'; // Redirection vers la version française
+            } else {
+                window.location.href = './en/index.html'; // Redirection vers la version anglaise par défaut
+            }
+            };
+        </script>
+    </head>
+    <body>
+    <!-- Contenu de la page d'accueil (peut être vide si la redirection est rapide) -->
+    </body>
+</html>
